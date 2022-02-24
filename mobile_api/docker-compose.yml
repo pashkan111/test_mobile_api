@@ -14,3 +14,14 @@ services:
     ports:
       - "5434:5432"
 
+  web:
+    build: .
+    restart: always
+    command: bash entrypoint.sh
+    volumes:
+      - .:/src/app
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+
