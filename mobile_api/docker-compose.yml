@@ -8,9 +8,9 @@ services:
       - POSTGRES_HOST=db
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=api_db
     volumes:
       - ./volumes/postgresql/pg-data1:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - "5434:5432"
 
-  

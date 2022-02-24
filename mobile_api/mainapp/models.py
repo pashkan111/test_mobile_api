@@ -8,7 +8,7 @@ class Worker(models.Model):
 
 class Shop(models.Model):
     name = models.CharField(max_length=255)
-    worker = models.ForeignKey(Worker, on_delete=models.SET_NULL)
+    worker = models.ForeignKey(Worker, on_delete=models.SET_NULL, null=True)
     
     
 class Visit(models.Model):
