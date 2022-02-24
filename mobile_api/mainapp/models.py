@@ -16,12 +16,13 @@ class Shop(models.Model):
     def __str__(self) -> str:
         return self.name
     
+    
 class Visit(models.Model):
-    date = models.DateTimeField()
+    date = models.DateTimeField(auto_now_add=True)
     shop = models.ForeignKey(Shop, on_delete=models.CASCADE)
     latitude = models.FloatField()
     longitude = models.FloatField()
     
     def __str__(self) -> str:
-        return self.id
+        return str(self.id)
     
