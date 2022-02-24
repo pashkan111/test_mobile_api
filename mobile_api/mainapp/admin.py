@@ -16,7 +16,7 @@ class ShopAdmin(admin.ModelAdmin):
     
 class VisitAdmin(admin.ModelAdmin):
     list_display = ('date', 'latitude', 'longitude')
-    search_fields = ('shop__worker__name', )
+    search_fields = ('shop__worker__name', 'shop__name')
 
 
 admin.site.register(models.Worker, WorkerAdmin)
