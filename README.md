@@ -8,7 +8,7 @@
     
 2. Route allows you visit shop if you havw an access:
     _POST api/visit?phone=****_<br/>
-    #### data: <br/>
+    _data_: <br/>
     id:int,<br/>
     latitude: float <br/>
     longitude: float <br/>
